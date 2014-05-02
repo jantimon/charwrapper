@@ -35,6 +35,7 @@
         describe('wrapper', function() {
           it('should wrap all chars', function () {
             var demo = createDemoElement();
+            document.body.appendChild(demo);
             charwrapper.wrap(demo);
             expect($('.char', demo).length).toBe(13);
           });
@@ -42,7 +43,11 @@
             var demo = createDemoElement();
             charwrapper.wrap(demo);
             expect(demo.dataCharwrapper.spans.length).toBe(13);
-            document.body.appendChild(demo);
+          });
+          it('should return all spans for the unwrapping', function () {
+            var demo = createDemoElement();
+            var result = charwrapper.wrap(demo);
+            expect(result.spans.length).toBe(13);
           });
 
         });
