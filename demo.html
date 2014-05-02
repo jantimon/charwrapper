@@ -7,6 +7,8 @@
 <body>
 <script src="lib/charwrapper.js"></script>
 
+  <h1>Demo</h1>
+
   <table>
     <tr>
       <td>Hey</td>
@@ -41,6 +43,60 @@
   .char-2 {
     color: blue;
   }
+  .char-3 {
+    color: grey;
+  }
 </style>
+
+<h2>Html</h2>
+<pre>
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Hey&lt;/td&gt;
+      &lt;td&gt;how&lt;/td&gt;
+      &lt;td&gt;are&lt;/td&gt;
+      &lt;td&gt;
+        &lt;span&gt;you&lt;/span&gt;&lt;strong&gt;?&lt;/strong&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+</pre>
+
+<h2>JS</h2>
+<pre>
+  &lt;script&gt;
+    // jQuery is only for the demo
+    jQuery(function($){
+      $(&quot;td&quot;).hover(function(){
+        charwrapper.wrap(this);
+      }, function(){
+        charwrapper.unwrap(this);
+      })
+    });
+  &lt;/script&gt;
+</pre>
+
+<h2>CSS</h2>
+<pre>
+  &lt;style&gt;
+    .char {
+      text-decoration: underline;
+    }
+    .char-0 {
+      color: red;
+    }
+    .char-1 {
+      color: green;
+    }
+    .char-2 {
+      color: blue;
+    }
+    .char-3 {
+      color: grey;
+    }
+  &lt;/style&gt;
+</pre>
+
+
 </body>
 </html>

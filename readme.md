@@ -54,4 +54,4 @@ charwrapper.unwrap(document.getElementById('demo'));
     </table>
 ```
 
-See the [demo](demo.html)
+See the [demo](http://jantimon.github.io/charwrapper/demo.html)
