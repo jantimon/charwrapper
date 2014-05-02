@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <title>Demo page</title>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+<script src="lib/charwrapper.js"></script>
+
+  <table>
+    <tr>
+      <td>Hey</td>
+      <td>how</td>
+      <td>are</td>
+      <td>
+        <span>you</span><strong>?</strong>
+      </td>
+    </tr>
+  </table>
+
+<script>
+  // jQuery is only for the demo
+  jQuery(function($){
+    $("td").hover(function(){
+      charwrapper.wrap(this);
+    }, function(){
+      charwrapper.unwrap(this);
+    })
+  });
+</script>
+<style>
+  .char {
+    text-decoration: underline;
+  }
+  .char-0 {
+    color: red;
+  }
+  .char-1 {
+    color: green;
+  }
+  .char-2 {
+    color: blue;
+  }
+</style>
+</body>
+</html>
